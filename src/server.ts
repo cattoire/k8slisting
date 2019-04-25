@@ -6,7 +6,6 @@ var mongoose = require('mongoose');
 mongoose.Promise = Promise;
 class App {
   public express: express.Application;
-  console.log(process.env);
   public mongoUrl: string = 'mongodb://'+process.env.MONGOUSERNAME+':'+process.env.MONGOPASSWORD+'@'+process.env.HOSTNAMEMONGODB+':'+process.env.MONGOPORT+'/admin';
   constructor() {
     this.express = express();
@@ -16,6 +15,7 @@ class App {
   }
   private mongoSetup(): void{
     mongoose.Promise = global.Promise;
+    console.log(this.mongoUrl);
     mongoose.connect(this.mongoUrl);        
 }
   private middleware(): void {
