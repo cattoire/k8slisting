@@ -37,3 +37,27 @@ istio:
   weight: 100
 generatedBindings:
   enabled: true
+
+envOfSecrets:
+  envMONGOUSERNAME:
+    name: MONGOUSERNAME
+    secretKeyRef:
+      name: mysecret
+      key: MONGOUSERNAME
+  envMONGOPASSWORD:
+    name: MONGOPASSWORD
+    secretKeyRef:
+      name: mysecret
+      key: MONGOPASSWORD
+
+envOfConfigmaps:
+  envMONGOPORT:
+    name: MONGOPORT
+    configMapKeyRef:
+      name: env-database
+      key: MONGOPORT
+  envHOSTNAMEMONGODB:
+    name: HOSTNAMEMONGODB
+    configMapKeyRef:
+      name: env-database
+      key: HOSTNAMEMONGODB
