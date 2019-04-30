@@ -17,8 +17,8 @@ livenessProbe:
   timeoutSeconds: 2
   periodSeconds: 10
 image:
-  name: listingsvc
-  imageName: "mycluster.icp:8500/default/k8listing:latest" 
+  repository: registry.ng.bluemix.net/replace-me-namespace/k8listing
+  tag: v1.0.0
   imagePullPolicy: Always
   ports:
     containerPort: 7000
