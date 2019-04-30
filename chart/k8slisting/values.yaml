@@ -17,7 +17,8 @@ livenessProbe:
   timeoutSeconds: 2
   periodSeconds: 10
 image:
-  repository: registry.ng.bluemix.net/replace-me-namespace/k8listing
+  name: k8slisting
+  imageName: registry.ng.bluemix.net/replace-me-namespace/k8slisting
   tag: v1.0.0
   imagePullPolicy: Always
   ports:
