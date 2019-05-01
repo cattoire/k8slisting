@@ -20,7 +20,7 @@ spec:
      containers:
      containers:
        - name: {{ .Values.image.name }} 
-         image: {{ .Values.image.imageName }} 
+         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
          readinessProbe:
           httpGet: 
             path: {{ .Values.readinessProbe.path }} 

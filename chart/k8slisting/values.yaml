@@ -18,7 +18,7 @@ livenessProbe:
   periodSeconds: 10
 image:
   name: k8slisting
-  imageName: registry.ng.bluemix.net/replace-me-namespace/k8slisting
+  repository: registry.ng.bluemix.net/replace-me-namespace/hellonode
   tag: v1.0.0
   imagePullPolicy: Always
   ports:
